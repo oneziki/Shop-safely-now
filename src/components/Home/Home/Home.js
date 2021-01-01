@@ -6,6 +6,7 @@ import { ProductsContext } from "../../../Global/ProductsContext";
 import Banner from "../Banner/Banner";
 import currencyFormatter from "currency-formatter";
 import "./Home.css";
+import Footer from "../Footer/Footer";
 const Home = () => {
   const { products } = useContext(ProductsContext);
   const { dispatch } = useContext(CartContext);
@@ -74,6 +75,8 @@ const Home = () => {
           </div>
         ))}
       </div>
+
+      <Footer></Footer>
     </>
   );
 };
