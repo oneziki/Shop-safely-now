@@ -52,7 +52,7 @@ const Footer = () => {
         <div></div>
       </div>
       <div className="text-center pb-2">
-        <p>© Copyright orangeLab {new Date().getFullYear()}</p>
+        <p>© Copyright by Nahidul Islam {new Date().getFullYear()}</p>
       </div>
     </footer>
   );
