@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../../../Global/CartsContext";
 import { ProductsContext } from "../../../Global/ProductsContext";
 import Banner from "../Banner/Banner";
+import currencyFormatter from "currency-formatter";
 import "./Home.css";
 const Home = () => {
   const { products } = useContext(ProductsContext);
@@ -38,7 +39,9 @@ const Home = () => {
                     <Card.Text>
                       {product.description}
                       <br />
-                      <strong>${product.price}.00</strong>
+                      <strong>{currencyFormatter.format(product.price, {
+                          code: "USD",
+                        })}</strong>
                     </Card.Text>
                     <Button
                       className="cart-button"
@@ -46,7 +49,7 @@ const Home = () => {
                         dispatch({
                           type: "ADD_TO_CART",
                           id: product.id,
-                          product: product,
+                          products: products,
                         })
                       }
                     >

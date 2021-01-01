@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { CartContext } from "../../../Global/CartsContext";
 import { BsDash, BsPlus, BsFillTrashFill } from "react-icons/bs";
+import currencyFormatter from "currency-formatter";
 import "./Cart.css";
 const Cart = () => {
   const { shoppingCart, totalPrice, qty, dispatch } = useContext(CartContext);
@@ -10,28 +11,76 @@ const Cart = () => {
       <h2 className="text-center">cart section</h2>
       <div className="cartContainer">
         <div className=" cartDetails" style={{ marginTop: "100px" }}>
-          {shoppingCart.length > 0
-            ? shoppingCart.map((cart) => (
-                <div className="cart" key={cart.id}>
-                  <span className="cartProImage">
-                    <img src={cart.image} alt="" />
-                  </span>
-                  <span className="cartProductName">{cart.name}</span>
-                  <span className="cartProductPrice">${cart.price}</span>
-                  <span className="inc">
-                    <BsPlus />
-                  </span>
-                  <span className="productQuantity">{cart.qty}</span>
-                  <span className="dec">
-                    <BsDash />
-                  </span>
-                  <span className="productTotalPrice">{cart.totalPrice}</span>
-                  <span className="deleteCartPro">
-                    <BsFillTrashFill />
-                  </span>
+          <div className="row">
+            <div className="col-9">
+              {shoppingCart.length > 0
+                ? shoppingCart.map((cart) => (
+                    <div className="cart" key={cart.id}>
+                      <span className="cartProImage">
+                        <img src={cart.image} alt="" />
+                        <span className="imageCount">{cart.qty}</span>
+                      </span>
+                      <span className="cartProductName">{cart.name}</span>
+                      <span className="cartProductPrice">{currencyFormatter.format(cart.price, {
+                          code: "USD",
+                        })}</span>
+                      <span
+                        className="dec"
+                        onClick={() =>
+                          dispatch({ type: "DEC", id: cart.id, cart })
+                        }
+                      >
+                        <BsDash />
+                      </span>
+                      <span className="productQuantity">{cart.qty}</span>
+                      <span
+                        className="inc"
+                        onClick={() =>
+                          dispatch({ type: "INC", id: cart.id, cart })
+                        }
+                      >
+                        <BsPlus />
+                      </span>
+                      <span className="productTotalPrice">
+                      {currencyFormatter.format(cart.qty * cart.price, {
+                          code: "USD",
+                        })}
+                       
+                      </span>
+                      <span
+                        className="deleteCartPro"
+                        onClick={() =>
+                          dispatch({ type: "DELETE", id: cart.id, cart })
+                        }
+                      >
+                        <BsFillTrashFill />
+                      </span>
+                    </div>
+                  ))
+                : "sorry your cart is empty"}
+            </div>
+            <div className="col-3">
+              {shoppingCart.length > 0 ? (
+                <div className="cart-summary">
+                  <div className="summary">
+                    <h2>Summary</h2>
+                    <div className="row  totalItems">
+                      <div className="col-6 items">Total Items</div>
+                      <div className="col-6 itemsCount">{qty}.00</div>
+                    </div>
+                    <div className="row totalPriceSection">
+                      <div className="col-6 justTitle">Total Price</div>
+                      <div className="col-6 itemsPrice">{currencyFormatter.format(totalPrice, {
+                          code: "USD",
+                        })}</div>
+                    </div>
+                  </div>
                 </div>
-              ))
-            : "sorry your cart is empty"}
+              ) : (
+                ""
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </section>

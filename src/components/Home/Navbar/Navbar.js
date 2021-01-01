@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../../../Global/CartsContext";
 import "./Navbar.css";
 const Navbar = () => {
-  const { shoppingCart, qty } = useContext(CartContext);
+  const {shoppingCart,qty} = useContext(CartContext);
   return (
     <section>
       <div>
@@ -35,7 +35,7 @@ const Navbar = () => {
                   <Link to="/cart">
                     <div className="basket">
                       <BsFillBagFill className="cart-icon" />
-                      <span>{qty}</span>
+                      <span>{shoppingCart ? qty : 0}</span>
                     </div>
                   </Link>
                 </li>
