@@ -27,9 +27,9 @@ const Navbar = () => {
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="ml-auto navbar-nav">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">
-                    Home <span class="sr-only">(current)</span>
-                  </a>
+                <Link to="/"  style={{ textDecoration: "none",fontWeight:'bold'}}>
+              Home
+            </Link>
                 </li>
                 <li>
                   <Link to="/cart">
