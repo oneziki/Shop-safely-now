@@ -19,6 +19,7 @@ const ProductsContextProvider = (props) => {
       image: laptop1,
       description:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, ex.",
+        details:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum dolore quidem ad provident hic, quaerat quae commodi omnis. Delectus ipsam cum eveniet nihil cumque cupiditate numquam! Id, quas debitis?Corporis distinctio ab ducimus ipsum, esse eaque, quasi architecto porro qui odio enim nam assumenda cumque obcaecati nesciunt excepturi incidunt itaque provident quod expedita ex adipisci voluptatibus? Maxime, sit pariatur!',
     },
     {
       id: 2,
@@ -27,6 +28,7 @@ const ProductsContextProvider = (props) => {
       image: laptop2,
       description:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, ex.",
+        details:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum dolore quidem ad provident hic, quaerat quae commodi omnis. Delectus ipsam cum eveniet nihil cumque cupiditate numquam! Id, quas debitis?Corporis distinctio ab ducimus ipsum, esse eaque, quasi architecto porro qui odio enim nam assumenda cumque obcaecati nesciunt excepturi incidunt itaque provident quod expedita ex adipisci voluptatibus? Maxime, sit pariatur!',
     },
     {
       id: 3,
@@ -35,6 +37,7 @@ const ProductsContextProvider = (props) => {
       image: laptop3,
       description:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, ex.",
+        details:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum dolore quidem ad provident hic, quaerat quae commodi omnis. Delectus ipsam cum eveniet nihil cumque cupiditate numquam! Id, quas debitis?Corporis distinctio ab ducimus ipsum, esse eaque, quasi architecto porro qui odio enim nam assumenda cumque obcaecati nesciunt excepturi incidunt itaque provident quod expedita ex adipisci voluptatibus? Maxime, sit pariatur!',
     },
     {
       id: 4,
@@ -43,6 +46,7 @@ const ProductsContextProvider = (props) => {
       image: phone1,
       description:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, ex.",
+        details:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum dolore quidem ad provident hic, quaerat quae commodi omnis. Delectus ipsam cum eveniet nihil cumque cupiditate numquam! Id, quas debitis?Corporis distinctio ab ducimus ipsum, esse eaque, quasi architecto porro qui odio enim nam assumenda cumque obcaecati nesciunt excepturi incidunt itaque provident quod expedita ex adipisci voluptatibus? Maxime, sit pariatur!',
     },
     {
       id: 5,
@@ -51,6 +55,7 @@ const ProductsContextProvider = (props) => {
       image: phone2,
       description:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, ex.",
+        details:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum dolore quidem ad provident hic, quaerat quae commodi omnis. Delectus ipsam cum eveniet nihil cumque cupiditate numquam! Id, quas debitis?Corporis distinctio ab ducimus ipsum, esse eaque, quasi architecto porro qui odio enim nam assumenda cumque obcaecati nesciunt excepturi incidunt itaque provident quod expedita ex adipisci voluptatibus? Maxime, sit pariatur!',
     },
     {
       id: 6,
@@ -59,6 +64,7 @@ const ProductsContextProvider = (props) => {
       image: phone3,
       description:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, ex.",
+        details:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum dolore quidem ad provident hic, quaerat quae commodi omnis. Delectus ipsam cum eveniet nihil cumque cupiditate numquam! Id, quas debitis?Corporis distinctio ab ducimus ipsum, esse eaque, quasi architecto porro qui odio enim nam assumenda cumque obcaecati nesciunt excepturi incidunt itaque provident quod expedita ex adipisci voluptatibus? Maxime, sit pariatur!',
     },
     {
       id: 7,
@@ -67,6 +73,7 @@ const ProductsContextProvider = (props) => {
       image: shoes1,
       description:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, ex.",
+        details:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum dolore quidem ad provident hic, quaerat quae commodi omnis. Delectus ipsam cum eveniet nihil cumque cupiditate numquam! Id, quas debitis?Corporis distinctio ab ducimus ipsum, esse eaque, quasi architecto porro qui odio enim nam assumenda cumque obcaecati nesciunt excepturi incidunt itaque provident quod expedita ex adipisci voluptatibus? Maxime, sit pariatur!',
     },
     {
       id: 8,
@@ -75,6 +82,7 @@ const ProductsContextProvider = (props) => {
       image: shoes2,
       description:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, ex.",
+        details:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum dolore quidem ad provident hic, quaerat quae commodi omnis. Delectus ipsam cum eveniet nihil cumque cupiditate numquam! Id, quas debitis?Corporis distinctio ab ducimus ipsum, esse eaque, quasi architecto porro qui odio enim nam assumenda cumque obcaecati nesciunt excepturi incidunt itaque provident quod expedita ex adipisci voluptatibus? Maxime, sit pariatur!',
     },
   ]);
   return (

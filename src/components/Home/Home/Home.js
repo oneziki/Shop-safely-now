@@ -29,7 +29,7 @@ const Home = () => {
               >
                 <div>
                   <Link
-                    to={`/foodDetails/${product.id}`}
+                    to={`/details/${product.id}`}
                     style={{ textDecoration: "none" }}
                   >
                     <Card.Img variant="top" src={product.image} />
@@ -43,6 +43,9 @@ const Home = () => {
                           code: "USD",
                         })}</strong>
                     </Card.Text>
+                  <div className="row">
+                    <div className="col-6">
+
                     <Button
                       className="cart-button"
                       onClick={() =>
@@ -55,6 +58,14 @@ const Home = () => {
                     >
                       Add to Cart
                     </Button>
+                    </div>
+                    <div className="col-6">
+                     <Link to={`/details/${product.id}`}
+                    style={{ textDecoration: "none" }}>
+                     <Button className="btn btn-success">View Details</Button>
+                     </Link>
+                    </div>
+                  </div>
                   </Card.Body>
                 </div>
               </Card>

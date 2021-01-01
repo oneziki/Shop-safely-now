@@ -3,9 +3,13 @@ import { CartContext } from "../../../Global/CartsContext";
 import { BsDash, BsPlus, BsFillTrashFill } from "react-icons/bs";
 import currencyFormatter from "currency-formatter";
 import "./Cart.css";
+import { Button } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 const Cart = () => {
   const { shoppingCart, totalPrice, qty, dispatch } = useContext(CartContext);
   //console.log('data loaded', data)
+
+  const history = useHistory();
   return (
     <section>
       <h2 className="text-center">cart section</h2>
@@ -21,9 +25,11 @@ const Cart = () => {
                         <span className="imageCount">{cart.qty}</span>
                       </span>
                       <span className="cartProductName">{cart.name}</span>
-                      <span className="cartProductPrice">{currencyFormatter.format(cart.price, {
+                      <span className="cartProductPrice">
+                        {currencyFormatter.format(cart.price, {
                           code: "USD",
-                        })}</span>
+                        })}
+                      </span>
                       <span
                         className="dec"
                         onClick={() =>
@@ -42,10 +48,9 @@ const Cart = () => {
                         <BsPlus />
                       </span>
                       <span className="productTotalPrice">
-                      {currencyFormatter.format(cart.qty * cart.price, {
+                        {currencyFormatter.format(cart.qty * cart.price, {
                           code: "USD",
                         })}
-                       
                       </span>
                       <span
                         className="deleteCartPro"
@@ -70,9 +75,20 @@ const Cart = () => {
                     </div>
                     <div className="row totalPriceSection">
                       <div className="col-6 justTitle">Total Price</div>
-                      <div className="col-6 itemsPrice">{currencyFormatter.format(totalPrice, {
+                      <div className="col-6 itemsPrice">
+                        {currencyFormatter.format(totalPrice, {
                           code: "USD",
-                        })}</div>
+                        })}
+                      </div>
+                    </div>
+
+                    <div>
+                      <Button
+                        className="col-12 btn btn-primary"
+                        onClick={() => history.push("/checkout")}
+                      >
+                        Checkout
+                      </Button>
                     </div>
                   </div>
                 </div>

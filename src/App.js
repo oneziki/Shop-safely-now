@@ -6,6 +6,8 @@ import ProductsContextProvider from "./Global/ProductsContext";
 import Cart from "./components/Home/Cart/Cart";
 import NotFound from "./components/NotFound/NotFound";
 import CartContextProvider from "./Global/CartsContext";
+import ProductDetails from "./components/ProductDetails/ProductDetails";
+import CheckOut from "./components/Home/CheckOut/CheckOut";
 function App() {
   return (
     <ProductsContextProvider>
@@ -18,6 +20,12 @@ function App() {
             </Route>
             <Route path="/cart">
               <Cart></Cart>
+            </Route>
+            <Route path="/details/:detailId">
+              <ProductDetails></ProductDetails>
+            </Route>
+            <Route path="/checkout">
+              <CheckOut></CheckOut>
             </Route>
             <Route path="*">
               <NotFound></NotFound>
