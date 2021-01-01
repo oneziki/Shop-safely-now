@@ -20,3 +20,13 @@ It is a single page e-commerce website (using Context API), where the user can s
 * Bootstrap
 * React icons
 * currencyFormatter
+
+## Screenshots
+
+![s1](https://user-images.githubusercontent.com/39863835/103447289-35c6a580-4cb3-11eb-9cd4-13de4a56f3a4.png)
+![s2](https://user-images.githubusercontent.com/39863835/103447288-352e0f00-4cb3-11eb-86ac-8ee4025fe55f.jpg)
+![s3](https://user-images.githubusercontent.com/39863835/103447286-34957880-4cb3-11eb-9255-dff7db5bd139.jpg)
+![s4](https://user-images.githubusercontent.com/39863835/103447285-32cbb500-4cb3-11eb-861a-ba474ab436a3.jpg)
+
+
+
