@@ -19,7 +19,7 @@ const Cart = () => {
             <div className="col-9">
               {shoppingCart.length > 0
                 ? shoppingCart.map((cart) => (
-                    <div className="cart" key={cart.id}>
+                    <div className="cart" key={cart.productCode}>
                       <span className="cartProImage">
                         <img src={cart.image} alt="" />
                         <span className="imageCount">{cart.qty}</span>
@@ -33,7 +33,7 @@ const Cart = () => {
                       <span
                         className="dec"
                         onClick={() =>
-                          dispatch({ type: "DEC", id: cart.id, cart })
+                          dispatch({ type: "DEC", productCode: cart.productCode, cart })
                         }
                       >
                         <BsDash />
@@ -42,7 +42,7 @@ const Cart = () => {
                       <span
                         className="inc"
                         onClick={() =>
-                          dispatch({ type: "INC", id: cart.id, cart })
+                          dispatch({ type: "INC", productCode: cart.productCode, cart })
                         }
                       >
                         <BsPlus />
@@ -55,7 +55,7 @@ const Cart = () => {
                       <span
                         className="deleteCartPro"
                         onClick={() =>
-                          dispatch({ type: "DELETE", id: cart.id, cart })
+                          dispatch({ type: "DELETE", productCode: cart.productCode, cart })
                         }
                       >
                         <BsFillTrashFill />

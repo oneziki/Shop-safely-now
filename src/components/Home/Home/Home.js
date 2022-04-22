@@ -15,13 +15,13 @@ const Home = () => {
   //console.log('data variable',data)
   return (
     <>
-      <Banner></Banner>
+      {/* <Banner></Banner> */}
 
       <div className="row justify-content-center">
         {products.map((product) => (
           <div
             className="col-md-4 d-flex justify-content-center"
-            key={product.id}
+            key={product.productCode}
           >
             <div>
               <Card
@@ -30,7 +30,7 @@ const Home = () => {
               >
                 <div>
                   <Link
-                    to={`/details/${product.id}`}
+                    to={`/details/${product.productCode}`}
                     style={{ textDecoration: "none" }}
                   >
                     <Card.Img variant="top" src={product.image} />
@@ -44,7 +44,7 @@ const Home = () => {
                           code: "USD",
                         })}</strong>
                     </Card.Text>
-                  <div className="row">
+                  {/* <div className="row">
                     <div className="col-6">
 
                     <Button
@@ -66,7 +66,7 @@ const Home = () => {
                      <Button className="btn btn-success">View Details</Button>
                      </Link>
                     </div>
-                  </div>
+                  </div> */}
                   </Card.Body>
                 </div>
               </Card>
@@ -76,7 +76,7 @@ const Home = () => {
         ))}
       </div>
 
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </>
   );
 };

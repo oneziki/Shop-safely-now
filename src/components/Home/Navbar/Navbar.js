@@ -10,8 +10,8 @@ const Navbar = () => {
       <div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container py-2">
-            <Link to="/" className="brand" style={{ textDecoration: "none" }}>
-              Shop safely Now
+            <Link to="/" className="brand" style={{ textDecoration: "none", color:"lime" }}>
+              Flash Voucher Store
             </Link>
             <button
               class="navbar-toggler"
@@ -27,7 +27,7 @@ const Navbar = () => {
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="ml-auto navbar-nav">
                 <li class="nav-item active">
-                <Link to="/"  style={{ textDecoration: "none",fontWeight:'bold'}}>
+                <Link to="/"  style={{ textDecoration: "none",fontWeight:'bold', color: "black"}}>
               Home
             </Link>
                 </li>

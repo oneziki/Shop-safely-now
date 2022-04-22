@@ -13,8 +13,8 @@ export const ProductsContext = createContext();
 const ProductsContextProvider = (props) => {
   const [products] = useState([
     {
-      id: 1,
-      name: "Macbook",
+      productCode: 1,
+      name: "1Voucher",
       price: 500,
       image: laptop1,
       description:
@@ -22,68 +22,68 @@ const ProductsContextProvider = (props) => {
         details:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum dolore quidem ad provident hic, quaerat quae commodi omnis. Delectus ipsam cum eveniet nihil cumque cupiditate numquam! Id, quas debitis?Corporis distinctio ab ducimus ipsum, esse eaque, quasi architecto porro qui odio enim nam assumenda cumque obcaecati nesciunt excepturi incidunt itaque provident quod expedita ex adipisci voluptatibus? Maxime, sit pariatur!',
     },
     {
-      id: 2,
-      name: "HP",
+      productCode: 2,
+      name: "Netflix",
       price: 400,
       image: laptop2,
       description:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, ex.",
         details:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum dolore quidem ad provident hic, quaerat quae commodi omnis. Delectus ipsam cum eveniet nihil cumque cupiditate numquam! Id, quas debitis?Corporis distinctio ab ducimus ipsum, esse eaque, quasi architecto porro qui odio enim nam assumenda cumque obcaecati nesciunt excepturi incidunt itaque provident quod expedita ex adipisci voluptatibus? Maxime, sit pariatur!',
     },
-    {
-      id: 3,
-      name: "HP Pro",
-      price: 450,
-      image: laptop3,
-      description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, ex.",
-        details:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum dolore quidem ad provident hic, quaerat quae commodi omnis. Delectus ipsam cum eveniet nihil cumque cupiditate numquam! Id, quas debitis?Corporis distinctio ab ducimus ipsum, esse eaque, quasi architecto porro qui odio enim nam assumenda cumque obcaecati nesciunt excepturi incidunt itaque provident quod expedita ex adipisci voluptatibus? Maxime, sit pariatur!',
-    },
-    {
-      id: 4,
-      name: "Samsung",
-      price: 300,
-      image: phone1,
-      description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, ex.",
-        details:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum dolore quidem ad provident hic, quaerat quae commodi omnis. Delectus ipsam cum eveniet nihil cumque cupiditate numquam! Id, quas debitis?Corporis distinctio ab ducimus ipsum, esse eaque, quasi architecto porro qui odio enim nam assumenda cumque obcaecati nesciunt excepturi incidunt itaque provident quod expedita ex adipisci voluptatibus? Maxime, sit pariatur!',
-    },
-    {
-      id: 5,
-      name: "Samsung S8",
-      price: 350,
-      image: phone2,
-      description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, ex.",
-        details:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum dolore quidem ad provident hic, quaerat quae commodi omnis. Delectus ipsam cum eveniet nihil cumque cupiditate numquam! Id, quas debitis?Corporis distinctio ab ducimus ipsum, esse eaque, quasi architecto porro qui odio enim nam assumenda cumque obcaecati nesciunt excepturi incidunt itaque provident quod expedita ex adipisci voluptatibus? Maxime, sit pariatur!',
-    },
-    {
-      id: 6,
-      name: "Huawei",
-      price: 340,
-      image: phone3,
-      description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, ex.",
-        details:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum dolore quidem ad provident hic, quaerat quae commodi omnis. Delectus ipsam cum eveniet nihil cumque cupiditate numquam! Id, quas debitis?Corporis distinctio ab ducimus ipsum, esse eaque, quasi architecto porro qui odio enim nam assumenda cumque obcaecati nesciunt excepturi incidunt itaque provident quod expedita ex adipisci voluptatibus? Maxime, sit pariatur!',
-    },
-    {
-      id: 7,
-      name: "Nike",
-      price: 200,
-      image: shoes1,
-      description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, ex.",
-        details:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum dolore quidem ad provident hic, quaerat quae commodi omnis. Delectus ipsam cum eveniet nihil cumque cupiditate numquam! Id, quas debitis?Corporis distinctio ab ducimus ipsum, esse eaque, quasi architecto porro qui odio enim nam assumenda cumque obcaecati nesciunt excepturi incidunt itaque provident quod expedita ex adipisci voluptatibus? Maxime, sit pariatur!',
-    },
-    {
-      id: 8,
-      name: "Adidas",
-      price: 240,
-      image: shoes2,
-      description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, ex.",
-        details:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum dolore quidem ad provident hic, quaerat quae commodi omnis. Delectus ipsam cum eveniet nihil cumque cupiditate numquam! Id, quas debitis?Corporis distinctio ab ducimus ipsum, esse eaque, quasi architecto porro qui odio enim nam assumenda cumque obcaecati nesciunt excepturi incidunt itaque provident quod expedita ex adipisci voluptatibus? Maxime, sit pariatur!',
-    },
+    // {
+    //   id: 3,
+    //   name: "Spotify",
+    //   price: 450,
+    //   image: laptop3,
+    //   description:
+    //     "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, ex.",
+    //     details:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum dolore quidem ad provident hic, quaerat quae commodi omnis. Delectus ipsam cum eveniet nihil cumque cupiditate numquam! Id, quas debitis?Corporis distinctio ab ducimus ipsum, esse eaque, quasi architecto porro qui odio enim nam assumenda cumque obcaecati nesciunt excepturi incidunt itaque provident quod expedita ex adipisci voluptatibus? Maxime, sit pariatur!',
+    // },
+    // {
+    //   id: 4,
+    //   name: "Uber",
+    //   price: 300,
+    //   image: phone1,
+    //   description:
+    //     "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, ex.",
+    //     details:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum dolore quidem ad provident hic, quaerat quae commodi omnis. Delectus ipsam cum eveniet nihil cumque cupiditate numquam! Id, quas debitis?Corporis distinctio ab ducimus ipsum, esse eaque, quasi architecto porro qui odio enim nam assumenda cumque obcaecati nesciunt excepturi incidunt itaque provident quod expedita ex adipisci voluptatibus? Maxime, sit pariatur!',
+    // },
+    // {
+    //   id: 5,
+    //   name: "Uber Eats",
+    //   price: 350,
+    //   image: phone2,
+    //   description:
+    //     "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, ex.",
+    //     details:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum dolore quidem ad provident hic, quaerat quae commodi omnis. Delectus ipsam cum eveniet nihil cumque cupiditate numquam! Id, quas debitis?Corporis distinctio ab ducimus ipsum, esse eaque, quasi architecto porro qui odio enim nam assumenda cumque obcaecati nesciunt excepturi incidunt itaque provident quod expedita ex adipisci voluptatibus? Maxime, sit pariatur!',
+    // },
+    // {
+    //   id: 6,
+    //   name: "PlayStation",
+    //   price: 340,
+    //   image: phone3,
+    //   description:
+    //     "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, ex.",
+    //     details:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum dolore quidem ad provident hic, quaerat quae commodi omnis. Delectus ipsam cum eveniet nihil cumque cupiditate numquam! Id, quas debitis?Corporis distinctio ab ducimus ipsum, esse eaque, quasi architecto porro qui odio enim nam assumenda cumque obcaecati nesciunt excepturi incidunt itaque provident quod expedita ex adipisci voluptatibus? Maxime, sit pariatur!',
+    // },
+    // {
+    //   id: 7,
+    //   name: "Roblox",
+    //   price: 200,
+    //   image: shoes1,
+    //   description:
+    //     "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, ex.",
+    //     details:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum dolore quidem ad provident hic, quaerat quae commodi omnis. Delectus ipsam cum eveniet nihil cumque cupiditate numquam! Id, quas debitis?Corporis distinctio ab ducimus ipsum, esse eaque, quasi architecto porro qui odio enim nam assumenda cumque obcaecati nesciunt excepturi incidunt itaque provident quod expedita ex adipisci voluptatibus? Maxime, sit pariatur!',
+    // },
+    // {
+    //   id: 8,
+    //   name: "Deezer",
+    //   price: 240,
+    //   image: shoes2,
+    //   description:
+    //     "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, ex.",
+    //     details:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum dolore quidem ad provident hic, quaerat quae commodi omnis. Delectus ipsam cum eveniet nihil cumque cupiditate numquam! Id, quas debitis?Corporis distinctio ab ducimus ipsum, esse eaque, quasi architecto porro qui odio enim nam assumenda cumque obcaecati nesciunt excepturi incidunt itaque provident quod expedita ex adipisci voluptatibus? Maxime, sit pariatur!',
+    // },
   ]);
   return (
     <ProductsContext.Provider value={{ products }}>
