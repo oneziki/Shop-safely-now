@@ -7,19 +7,26 @@ import currencyFormatter from "currency-formatter";
 import "./Home.css";
 import Footer from "../Footer/Footer";
 const Home = () => {
-  const { products } = useContext(ProductsContext);
+  const { result } = useContext(ProductsContext);
   const { dispatch } = useContext(CartContext);
 
-  //console.log(products);
+  // console.log();
   //console.log('data variable',data)
   return (
     <>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
 
       <div className="row justify-content-center">
-        {products.map((product) => (
+        {(result?.result || []).map((item) => (
           <div
             className="col-md-4 d-flex justify-content-center"
-            key={product.id}
+            key={item.productCode}
           >
             <div>
               <Card
@@ -28,21 +35,23 @@ const Home = () => {
               >
                 <div>
                   <Link
-                    to={`/details/${product.id}`}
+                    to={`/details/${item.productCode}`}
                     style={{ textDecoration: "none" }}
                   >
-                    <Card.Img variant="top" src={product.image} />
-                  </Link>
+                    <Card.Img variant="top" src={"image"} />
+                  
                   <Card.Body className="text-center text-dark">
-                    <Card.Title>{product.name}</Card.Title>
+                    <Card.Title>{item.vendor}</Card.Title>
                     <Card.Text>
-                      {product.description}
+                      {item.description}
                       <br />
-                      <strong>{currencyFormatter.format(product.price, {
+                      <strong>
+                        {currencyFormatter.format(item.value, {
                           code: "USD",
-                        })}</strong>
+                        })}
+                      </strong>
                     </Card.Text>
-                  {/* <div className="row">
+                    {/* <div className="row">
                     <div className="col-6">
 
                     <Button
@@ -66,6 +75,7 @@ const Home = () => {
                     </div>
                   </div> */}
                   </Card.Body>
+                  </Link>
                 </div>
               </Card>
               <br />
@@ -74,7 +84,7 @@ const Home = () => {
         ))}
       </div>
 
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </>
   );
 };
