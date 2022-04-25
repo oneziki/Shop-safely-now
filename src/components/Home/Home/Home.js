@@ -3,7 +3,6 @@ import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { CartContext } from "../../../Global/CartsContext";
 import { ProductsContext } from "../../../Global/ProductsContext";
-import Banner from "../Banner/Banner";
 import currencyFormatter from "currency-formatter";
 import "./Home.css";
 import Footer from "../Footer/Footer";
@@ -15,13 +14,12 @@ const Home = () => {
   //console.log('data variable',data)
   return (
     <>
-      {/* <Banner></Banner> */}
 
       <div className="row justify-content-center">
         {products.map((product) => (
           <div
             className="col-md-4 d-flex justify-content-center"
-            key={product.productCode}
+            key={product.id}
           >
             <div>
               <Card
@@ -30,7 +28,7 @@ const Home = () => {
               >
                 <div>
                   <Link
-                    to={`/details/${product.productCode}`}
+                    to={`/details/${product.id}`}
                     style={{ textDecoration: "none" }}
                   >
                     <Card.Img variant="top" src={product.image} />
@@ -76,7 +74,7 @@ const Home = () => {
         ))}
       </div>
 
-      {/* <Footer></Footer> */}
+      <Footer></Footer>
     </>
   );
 };

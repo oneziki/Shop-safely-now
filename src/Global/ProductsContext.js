@@ -13,7 +13,7 @@ export const ProductsContext = createContext();
 const ProductsContextProvider = (props) => {
   const [products] = useState([
     {
-      productCode: 1,
+      id: 1,
       name: "1Voucher",
       price: 500,
       image: laptop1,
@@ -22,7 +22,7 @@ const ProductsContextProvider = (props) => {
         details:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam rerum dolore quidem ad provident hic, quaerat quae commodi omnis. Delectus ipsam cum eveniet nihil cumque cupiditate numquam! Id, quas debitis?Corporis distinctio ab ducimus ipsum, esse eaque, quasi architecto porro qui odio enim nam assumenda cumque obcaecati nesciunt excepturi incidunt itaque provident quod expedita ex adipisci voluptatibus? Maxime, sit pariatur!',
     },
     {
-      productCode: 2,
+      id: 2,
       name: "Netflix",
       price: 400,
       image: laptop2,

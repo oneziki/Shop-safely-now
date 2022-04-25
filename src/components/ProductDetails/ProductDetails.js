@@ -13,7 +13,7 @@ const ProductDetails = () => {
   const [productDetail, setProductDetail] = useState([]);
   const { name, price, details, image } = productDetail;
   useEffect(() => {
-    const selectedProduct = products.find((product) => product.productCode == detailId);
+    const selectedProduct = products.find((product) => product.id == detailId);
     setProductDetail(selectedProduct);
   }, [detailId]);
 
