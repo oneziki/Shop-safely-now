@@ -10,7 +10,7 @@ const Home = () => {
   const { result } = useContext(ProductsContext);
   const { dispatch } = useContext(CartContext);
 
-  // console.log();
+  console.log();
   //console.log('data variable',data)
   return (
     <>
@@ -35,7 +35,7 @@ const Home = () => {
               >
                 <div>
                   <Link
-                    to={`/details/${item.productCode}`}
+                    to={`/details/${item.productCode}/${item.value}/${item.vendor}`}
                     style={{ textDecoration: "none" }}
                   >
                     <Card.Img variant="top" src={"image"} />
